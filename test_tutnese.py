@@ -56,9 +56,9 @@ class TestCase(unittest.TestCase):
 		self.assertEqual(answer, encoded_str)
 
 	def test_encode_decode(self):
-		string = "Over hill, over dale, Thorough bush,\
-				thorough brier, Over park, over pale,\
-				Thorough flood, thorough fire!".lower()
+		string = """Over hill, over dale, Thorough bush,
+		thorough brier, Over park, over pale,
+		Thorough flood, thorough fire!""".lower()
 		string = "".join(string.split()) ## remove whitespace
 		encoded_str = tutnese.encode(string)  ## encode the string & make lower
 		## encode the string & rejoin ""
@@ -75,26 +75,30 @@ class TestCase(unittest.TestCase):
 		self.assertEqual(result, string_1)
 		
 	def test_decode_2(self):
-		string_1 = "Over hill, over dale, Thorough bush,\
-				thorough brier, Over park, over pale,\
-				Thorough flood, thorough fire!".lower()
-		string_2 = "ovuverur hashisqual, ovuverur dudalule,\
-				tuthashorurougughash bubusushash, \
-				tuthashorurougughash bubrurierur, ovuverur puparurkuck,\
-				ovuverur pupalule, tuthashorurougughash \
-				fufluloodud, tuthashorurougughash fufirure!"
+		string_1 = """
+		Over hill, over dale, Thorough bush,
+		thorough brier, Over park, over pale,
+		Thorough flood, thorough fire!""".lower()
+		string_2 = """
+		ovuverur hashisqual, ovuverur dudalule,
+		tuthashorurougughash bubusushash, 
+		tuthashorurougughash bubrurierur, ovuverur puparurkuck,
+		ovuverur pupalule, tuthashorurougughash
+		fufluloodud, tuthashorurougughash fufirure!"""
 		string_1 = "".join(string_1.split())
 		string_2 = "".join(string_2.split())
 		result = tutnese.decode(string_2)
 		self.assertEqual(result, string_1)
 
 	def test_encode_1(self):
-		string_1 = "Over hill, over dale, Thorough bush, thorough brier, \
-				Over park, over pale, Thorough flood, thorough fire!"
-		string_2 = "ovuverur hashisqual, ovuverur dudalule, tuthashorurougughash \
-				bubusushash,	tuthashorurougughash bubrurierur, ovuverur puparurkuck, \
-				ovuverur pupalule, tuthashorurougughash fufluloodud, \
-				tuthashorurougughash fufirure!"
+		string_1 = """
+		Over hill, over dale, Thorough bush, thorough brier, 
+		Over park, over pale, Thorough flood, thorough fire!"""
+		string_2 = """
+		ovuverur hashisqual, ovuverur dudalule,
+		tuthashorurougughash bubusushash,	tuthashorurougughash
+		bubrurierur, ovuverur puparurkuck, ovuverur pupalule,
+		tuthashorurougughash fufluloodud,	tuthashorurougughash fufirure!"""
 		string_1 = "".join(string_1.split())
 		string_2 = "".join(string_2.split())
 		result = tutnese.encode(string_1)
