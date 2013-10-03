@@ -1,6 +1,7 @@
 data/.asdf.py.swp.i
 data/tutnese.py.i
 data/asdf.py.i
+data/.gitignore.i
 data/test_tutnese.py.i
 data/.test_tutnese.py.swp.i
 data/test-regex.py.i
